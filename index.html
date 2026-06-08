@@ -208,14 +208,18 @@
 
     .k{
         text-decoration: none;
+        background-color: var(--accent);
+    }
+    .k:hover(){
+        color: var(--surface);
     }
   </style>
 </head>
 <body>
   <header>
     <h1>todos</h1>
-    <p id="stack-label">full-stack · sqlite . <a href="https://kennedykalawa.github.io/portfolio-sample/" class="k">by ktec</a> s </header>
-
+    <p id="stack-label">full-stack · sqlite . <a href="https://kennedykalawa.github.io/portfolio-sample/" class="k">by ktec</a>  </header>
+         
   <div id="add-form">
     <input type="text" id="new-todo" placeholder="what needs to be done?" autocomplete="off" />
     <button onclick="addTodo()">add</button>
