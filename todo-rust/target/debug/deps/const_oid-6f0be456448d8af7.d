@@ -1,0 +1,13 @@
+/home/ktec/Downloads/todo/todo-rust/target/debug/deps/const_oid-6f0be456448d8af7.d: /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/lib.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/checked.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/arcs.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/buffer.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/encoder.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/error.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/parser.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/traits.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/../README.md
+
+/home/ktec/Downloads/todo/todo-rust/target/debug/deps/libconst_oid-6f0be456448d8af7.rmeta: /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/lib.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/checked.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/arcs.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/buffer.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/encoder.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/error.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/parser.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/traits.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/../README.md
+
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/lib.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/checked.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/arcs.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/buffer.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/encoder.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/error.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/parser.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/traits.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/const-oid-0.10.2/src/../README.md:

@@ -1,0 +1,12 @@
+/home/ktec/Downloads/todo/todo-rust/target/debug/deps/chacha20-6528c5c92de73c5f.d: /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/lib.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/variants.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/backends.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/rng.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/../README.md /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/backends/soft.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/backends/avx2.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/backends/sse2.rs
+
+/home/ktec/Downloads/todo/todo-rust/target/debug/deps/libchacha20-6528c5c92de73c5f.rmeta: /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/lib.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/variants.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/backends.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/rng.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/../README.md /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/backends/soft.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/backends/avx2.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/backends/sse2.rs
+
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/lib.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/variants.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/backends.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/rng.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/../README.md:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/backends/soft.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/backends/avx2.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/chacha20-0.10.0/src/backends/sse2.rs:

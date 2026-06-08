@@ -1,0 +1,1 @@
+cargo:rustc-env=MIME_TYPES_GENERATED_PATH=/home/ktec/Downloads/todo/todo-rust/target/debug/build/mime_guess-c8774aebb2955c2f/out/mime_types_generated.rs

@@ -1,0 +1,12 @@
+/home/ktec/Downloads/todo/todo-rust/target/debug/deps/impl_more-1946c3d22cb54189.d: /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/lib.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/as_ref.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/deref.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/display.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/error.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/from.rs
+
+/home/ktec/Downloads/todo/todo-rust/target/debug/deps/libimpl_more-1946c3d22cb54189.rlib: /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/lib.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/as_ref.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/deref.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/display.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/error.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/from.rs
+
+/home/ktec/Downloads/todo/todo-rust/target/debug/deps/libimpl_more-1946c3d22cb54189.rmeta: /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/lib.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/as_ref.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/deref.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/display.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/error.rs /home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/from.rs
+
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/lib.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/as_ref.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/deref.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/display.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/error.rs:
+/home/ktec/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/impl-more-0.1.9/src/from.rs:
