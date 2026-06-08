@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>todos</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0e0e0e;
+      --surface: #161616;
+      --border: #2a2a2a;
+      --accent: #c8f135;
+      --text: #f0f0f0;
+      --muted: #555;
+      --done: #333;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    header {
+      width: 100%;
+      max-width: 560px;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -2px;
+      color: var(--accent);
+      line-height: 1;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 0.75rem;
+      margin-top: 6px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    #add-form {
+      display: flex;
+      gap: 8px;
+      width: 100%;
+      max-width: 560px;
+      margin-bottom: 32px;
+    }
+
+    #add-form input {
+      flex: 1;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.9rem;
+      padding: 12px 16px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    #add-form input:focus { border-color: var(--accent); }
+    #add-form input::placeholder { color: var(--muted); }
+
+    #add-form button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 12px 20px;
+      cursor: pointer;
+      letter-spacing: 0.05em;
+      transition: opacity 0.15s;
+    }
+
+    #add-form button:hover { opacity: 0.85; }
+
+    #stats {
+      width: 100%;
+      max-width: 560px;
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #todo-list {
+      width: 100%;
+      max-width: 560px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .todo-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 14px 16px;
+      transition: border-color 0.15s, opacity 0.2s;
+      animation: slideIn 0.18s ease;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .todo-item:hover { border-color: #3a3a3a; }
+    .todo-item.done  { opacity: 0.45; }
+
+    .check-btn {
+      width: 18px;
+      height: 18px;
+      border: 1px solid var(--muted);
+      background: transparent;
+      cursor: pointer;
+      flex-shrink: 0;
+      position: relative;
+      transition: border-color 0.15s, background 0.15s;
+    }
+
+    .check-btn.checked {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .check-btn.checked::after {
+      content: '';
+      position: absolute;
+      top: 2px; left: 5px;
+      width: 5px; height: 9px;
+      border: 2px solid #000;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg);
+    }
+
+    .todo-text {
+      flex: 1;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      cursor: pointer;
+    }
+
+    .todo-item.done .todo-text {
+      text-decoration: line-through;
+      color: var(--muted);
+    }
+
+    .todo-text[contenteditable="true"] {
+      outline: none;
+      border-bottom: 1px solid var(--accent);
+    }
+
+    .del-btn {
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 1.1rem;
+      cursor: pointer;
+      padding: 0 4px;
+      line-height: 1;
+      transition: color 0.15s;
+    }
+
+    .del-btn:hover { color: #e05555; }
+
+    #empty {
+      color: var(--muted);
+      font-size: 0.8rem;
+      text-align: center;
+      padding: 40px 0;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: none;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.65rem;
+      color: #333;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>todos</h1>
+    <p id="stack-label">full-stack · sqlite</p>
+  </header>
+
+  <div id="add-form">
+    <input type="text" id="new-todo" placeholder="what needs to be done?" autocomplete="off" />
+    <button onclick="addTodo()">add</button>
+  </div>
+
+  <div id="stats">
+    <span id="count-total">0 items</span>
+    <span id="count-done">0 done</span>
+  </div>
+
+  <ul id="todo-list"></ul>
+  <p id="empty">no todos yet — add one above</p>
+
+  <footer>double-click text to edit &nbsp;·&nbsp; click ✕ to delete</footer>
+
+  <script>
+    const API = '/api/todos';
+    let todos = [];
+
+    async function fetchTodos() {
+      const res = await fetch(API);
+      todos = await res.json();
+      render();
+    }
+
+    async function addTodo() {
+      const input = document.getElementById('new-todo');
+      const title = input.value.trim();
+      if (!title) return;
+      await fetch(API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title })
+      });
+      input.value = '';
+      fetchTodos();
+    }
+
+    async function toggleTodo(id, done) {
+      await fetch(`${API}/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ done: !done })
+      });
+      fetchTodos();
+    }
+
+    async function deleteTodo(id) {
+      await fetch(`${API}/${id}`, { method: 'DELETE' });
+      fetchTodos();
+    }
+
+    async function updateTitle(id, title) {
+      if (!title.trim()) return fetchTodos();
+      await fetch(`${API}/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title: title.trim() })
+      });
+    }
+
+    function render() {
+      const list = document.getElementById('todo-list');
+      const empty = document.getElementById('empty');
+      const total = document.getElementById('count-total');
+      const doneCount = document.getElementById('count-done');
+
+      list.innerHTML = '';
+      total.textContent = `${todos.length} item${todos.length !== 1 ? 's' : ''}`;
+      doneCount.textContent = `${todos.filter(t => t.done).length} done`;
+      empty.style.display = todos.length === 0 ? 'block' : 'none';
+
+      todos.forEach(todo => {
+        const li = document.createElement('li');
+        li.className = `todo-item${todo.done ? ' done' : ''}`;
+
+        const check = document.createElement('button');
+        check.className = `check-btn${todo.done ? ' checked' : ''}`;
+        check.onclick = () => toggleTodo(todo.id, todo.done);
+
+        const text = document.createElement('span');
+        text.className = 'todo-text';
+        text.textContent = todo.title;
+        text.title = 'double-click to edit';
+        text.ondblclick = () => {
+          text.contentEditable = 'true';
+          text.focus();
+          const range = document.createRange();
+          range.selectNodeContents(text);
+          window.getSelection().removeAllRanges();
+          window.getSelection().addRange(range);
+        };
+        text.onblur = () => {
+          text.contentEditable = 'false';
+          updateTitle(todo.id, text.textContent);
+        };
+        text.onkeydown = e => {
+          if (e.key === 'Enter') { e.preventDefault(); text.blur(); }
+          if (e.key === 'Escape') { text.textContent = todo.title; text.blur(); }
+        };
+
+        const del = document.createElement('button');
+        del.className = 'del-btn';
+        del.textContent = '✕';
+        del.onclick = () => deleteTodo(todo.id);
+
+        li.append(check, text, del);
+        list.appendChild(li);
+      });
+    }
+
+    document.getElementById('new-todo').addEventListener('keydown', e => {
+      if (e.key === 'Enter') addTodo();
+    });
+
+    fetchTodos();
+  </script>
+</body>
+</html>
